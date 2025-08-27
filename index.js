@@ -9,7 +9,7 @@ app.use(cors({ origin: "*" }));
 
 app.get("/", async (req, res) => {
     try {
-        const response = await axios.get("http://s3.free-shoutcast.com:18226/statistics?json=1");
+        const response = await axios.get("http://s2.free-shoutcast.com:18272/statistics?json=1");
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: "Erro ao acessar estatísticas: " + error.message });
